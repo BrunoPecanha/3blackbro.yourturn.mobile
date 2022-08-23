@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:the_3_black_bro/presentation/widget/base-screen.widget.dart';
 
@@ -9,8 +11,16 @@ class Splash extends StatefulWidget {
 }
 
 class _SplashState extends State<Splash> {
+  Future<void> redirect() async {
+    Timer(const Duration(seconds: 3), () {
+      Navigator.pushNamed(context, '/login');
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    redirect();
+
     double deviceHeight = MediaQuery.of(context).size.height;
     double deviceWidth = MediaQuery.of(context).size.width;
 
