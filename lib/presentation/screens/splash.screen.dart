@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:the_3_black_bro/presentation/widget/animation/t3bb-jumping.widget.dart';
 import 'package:the_3_black_bro/presentation/widget/base-screen.widget.dart';
 
 class Splash extends StatefulWidget {
@@ -47,12 +48,20 @@ class _SplashState extends State<Splash> {
                 ),
               ),
             ),
-            const Text(
+            const SizedBox(
+              child: Text(
                 'MINHA VEZ',
                 style: TextStyle(
                   color: Color(0xFFFFFFFF),
                   fontSize: 32,
                 ),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 80),
+              width: deviceWidth,
+              height: 30,
+              child: const Jumping(numberOfDots: 5),
             )
           ]
       ),
